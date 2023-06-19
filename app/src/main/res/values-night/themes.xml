@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App" parent="Theme.App.DayNight">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <color name="card_accent_bg">@color/a1_200</color>
+
+</resources>

@@ -1,0 +1,84 @@
+{
+  // Здесь содержатся данные о путях к файлам трансляции на камерах разных производителей
+  "vendors": [
+    {
+      "name": "Hikvision",
+      "path": "/Streaming/Channels/<id>"
+    },
+    {
+      "name": "Dahua",
+      "path": "/cam/realmonitor?channel=<id>&subtype=0"
+    },
+    {
+      "name": "Uniview",
+      "path": "/live/<id>/substream/main"
+    },
+    {
+      "name": "Axis",
+      "path": "/axis-media/media.amp?resolution=640x480&camera=<id>&compression=h264"
+    },
+    {
+      "name": "Bosch",
+      "path": "/streams/<id>"
+    },
+    {
+      "name": "Vesta",
+      "path": "/stream=<id>.sdp"
+    },
+    {
+      "name": "Avigilon",
+      "path": "/axis-media/media.amp?camera=<id>&resolution=CIF&fps=25&compression=h264&color=1&text=0"
+    },
+    {
+      "name": "Flir",
+      "path": "/user=admin_password=<password>_channel=<id>.sdp"
+    },
+    {
+      "name": "Hanwha Techwin",
+      "path": "/cgi-bin/video.cgi?msubmenu=stream&channel=<id>&subtype=0"
+    },
+    {
+      "name": "Lilin",
+      "path": "/live/av0?user=<user>&passwd=<password>&channel=<id>&stream=0.sdp"
+    },
+    {
+      "name": "Pelco",
+      "path": "/Streaming/Channels/<id>01"
+    },
+    {
+      "name": "Samsung",
+      "path": "/live?ch=<id>&sess=5&u=<user>&p=<password>"
+    },
+    {
+      "name": "Panasonic",
+      "path": "/nphMotionJpeg?Resolution=640x480&Quality=Standard&ViewingMode=Active&Camera=<id>&Profile=1&_=1563162445927"
+    },
+    {
+      "name": "Vivotek",
+      "path": "/cgi-bin/video.cgi?media=RTSP&channel=<id>&subtype=0&unicast=true&proto=Onvif"
+    },
+    {
+      "name": "Acti",
+      "path": "/cgi-bin/video.cgi?msubmenu=mjpg&channel=<id>&subtype=0"
+    },
+    {
+      "name": "Arecont Vision",
+      "path": "/mjpg/video.mjpg?resolution=640x480&req_fps=10&camera=<id>"
+    }
+  ],
+
+  "values": [
+    {
+      "name": "<id>",
+      "datatype": "int"
+    },
+    {
+      "name": "<password>",
+      "datatype": "string"
+    },
+    {
+      "name": "<user>",
+      "datatype": "string"
+    }
+  ]
+}

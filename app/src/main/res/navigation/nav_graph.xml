@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="it.dsng.rci.ui.SurveillanceFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_surveillance">
+        <action
+            android:id="@+id/action_homeToSettings"
+            app:destination="@id/SettingsFragment" />
+        <action
+            android:id="@+id/action_homeToAddCamera"
+            app:destination="@id/CameraUrlFragment" />
+        <action
+            android:id="@+id/action_homeToInfo"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CameraUrlFragment"
+        android:name="it.dsng.rci.ui.StreamUrlFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_add_stream">
+        <action
+            android:id="@+id/action_cameraUrlToSettings"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="it.dsng.rci.ui.SettingsFragment"
+        android:label="fragment_settings_item_list"
+        tools:layout="@layout/fragment_settings_item_list" >
+
+        <action
+            android:id="@+id/action_settingsToHome"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_settingsToCameraUrl"
+            app:destination="@id/CameraUrlFragment" />
+        <action
+            android:id="@+id/action_SettingsToInfoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="it.dsng.rci.ui.InfoFragment"
+        android:label="InfoFragment" />
+</navigation>

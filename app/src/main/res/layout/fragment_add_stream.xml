@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SurveillanceFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                style="?attr/collapsingToolbarLayoutLargeStyle"
+                app:expandedTitleTextAppearance="@style/TextAppearance.Material3.DisplaySmall"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:maxLines="@integer/material_motion_duration_long_2"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:titleCollapseMode="scale">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    app:menu="@menu/add_stream_menu"
+                    android:id="@+id/AppToolbar"
+                    app:navigationIcon="@drawable/outline_arrow_back_24"
+                    android:layout_width="match_parent"
+                    android:hapticFeedbackEnabled="true"
+                    app:layout_collapseParallaxMultiplier="@integer/material_motion_duration_short_2"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="@string/add_stream" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="0dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="1dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/stream_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/add_stream_placeholder_name"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:inputType="textUri"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="1dp"
+                    android:paddingTop="10dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/add_stream_url"
+                    android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/stream_url"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:inputType="textUri"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="0dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="15dp"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="wrap_content"
+                            android:padding="15dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_info_24"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:text="@string/add_stream_placeholder_url"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
